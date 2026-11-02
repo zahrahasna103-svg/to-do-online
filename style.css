@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fff0f5;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(219, 112, 147, 0.15);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #d63384;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+header p {
+    color: #b76e8b;
+    font-size: 14px;
+}
+
+/* Form tambah tugas */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 13px;
+    border: 2px solid #ffc1d6;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #e75480;
+}
+
+form button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #d63384;
+}
+
+/* Tombol filter */
+.filter {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 14px;
+    border: none;
+    background: #ffe0eb;
+    color: #c44575;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background: #e75480;
+    color: white;
+}
+
+.filter-btn:hover {
+    background: #f7a8c4;
+    color: white;
+}
+
+/* Pesan loading dan error */
+#pesan {
+    text-align: center;
+    color: #c44575;
+    margin: 15px 0;
+}
+
+/* Daftar tugas */
+#daftar-tugas {
+    list-style: none;
+}
+
+.tugas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: #fff7fa;
+    box-shadow: 0 3px 8px rgba(219, 112, 147, 0.08);
+    transition: 0.3s;
+}
+
+.tugas:hover {
+    transform: translateY(-2px);
+}
+
+/* Tugas selesai */
+.tugas.selesai {
+    border-left: 5px solid #ec8caf;
+    background: #fff0f5;
+}
+
+/* Tugas belum selesai */
+.tugas.belum {
+    border-left: 5px solid #f4b6c9;
+    background: #fff8fa;
+}
+
+/* Status */
+.status {
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.selesai .status {
+    color: #d63384;
+}
+
+.belum .status {
+    color: #e89ab5;
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        flex: 1;
+        font-size: 11px;
+    }
+
+    .tugas {
+        font-size: 12px;
+    }
+}

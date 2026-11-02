@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Tugas Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📝 Daftar Tugas</h1>
+            <p>Kelola tugasmu dengan mudah!</p>
+        </header>
+
+        <form id="form-tugas">
+            <input
+                type="text"
+                id="input-tugas"
+                placeholder="Masukkan tugas baru..."
+                required
+            >
+            <button type="submit">+ Tambah</button>
+        </form>
+
+        <div class="filter">
+            <button class="filter-btn active" data-filter="semua">
+                Semua
+            </button>
+            <button class="filter-btn" data-filter="selesai">
+                Selesai
+            </button>
+            <button class="filter-btn" data-filter="belum">
+                Belum Selesai
+            </button>
+        </div>
+
+        <div id="pesan">Memuat...</div>
+
+        <ul id="daftar-tugas"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
